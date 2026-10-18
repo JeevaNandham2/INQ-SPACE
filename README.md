@@ -19,21 +19,23 @@ npm run build      # production files in dist/
 npm run preview    # serve the built site locally
 ```
 
-## Deploy
+## Deploy (GitHub Pages → https://inqspace.in)
 
-Live domain: **https://inqspace.in** (set in `.env` as `VITE_SITE_URL`, and in
-`public/robots.txt` and `public/sitemap.xml`).
+Every push to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes it
+to GitHub Pages. `public/CNAME` holds the custom domain.
 
-- **Netlify** — `netlify.toml` holds the build command (`npm run build`), the publish folder (`dist`)
-  and the rewrite that lets routes like `/about` open directly.
-- **Hostinger web hosting** — run `npm run build` and upload the *contents* of `dist/` to `public_html`.
-  `public/.htaccess` (copied into `dist/`) forces https, drops `www` and handles the routes.
+`npm run build` also runs `scripts/static-routes.mjs`, which writes `about.html`, `services.html`,
+`projects.html`, `contact.html` and `404.html` — each with its own title, description and canonical
+URL — so every page opens directly and is readable by search engines.
+
+The live address is `VITE_SITE_URL` in `.env`; `public/robots.txt`, `public/sitemap.xml` and
+`public/CNAME` use the same domain.
 
 ## Project layout
 
 - `src/pages/` — Home, About, Services, Projects, Contact
 - `src/components/` — navbar, footer, logo, shared sections
 - `src/data.js` — studio details, services, projects and other copy
-- `src/seo.js` — page titles and descriptions for search engines
+- `src/seo-pages.js` — page titles and descriptions; `src/seo.js` applies them as you navigate
 - `public/brand/` — official INQ SPACE logo artwork
 - `public/media/` — site photography and illustrations
