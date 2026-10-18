@@ -39,3 +39,4 @@ The live address is `VITE_SITE_URL` in `.env`; `public/robots.txt`, `public/site
 - `src/seo-pages.js` — page titles and descriptions; `src/seo.js` applies them as you navigate
 - `public/brand/` — official INQ SPACE logo artwork
 - `public/media/` — site photography and illustrations
+# INQ-SPACE
