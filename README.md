@@ -19,17 +19,17 @@ npm run build      # production files in dist/
 npm run preview    # serve the built site locally
 ```
 
-## Deploy (GitHub Pages → https://inqspace.in)
+## Deploy (Vercel → https://inqspace.in)
 
-Every push to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes it
-to GitHub Pages. `public/CNAME` holds the custom domain.
+The repository is connected to Vercel; every push to `main` deploys automatically.
+`vercel.json` sets the build (`npm run build` → `dist`), clean URLs (`/about` serves `about.html`),
+the `www` → apex redirect and caching headers.
 
 `npm run build` also runs `scripts/static-routes.mjs`, which writes `about.html`, `services.html`,
 `projects.html`, `contact.html` and `404.html` — each with its own title, description and canonical
 URL — so every page opens directly and is readable by search engines.
 
-The live address is `VITE_SITE_URL` in `.env`; `public/robots.txt`, `public/sitemap.xml` and
-`public/CNAME` use the same domain.
+The live address is `VITE_SITE_URL` in `.env`; `public/robots.txt` and `public/sitemap.xml` use the same domain.
 
 ## Project layout
 
