@@ -1,0 +1,16 @@
+# dependencies and build output
+node_modules/
+dist/
+
+# OS / editor files
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# local-only environment overrides (the shared .env holds no secrets)
+.env.local
+.env.*.local
+
+# working documents that are not part of the website
+INQSpace-Website-Content-Checklist.pdf

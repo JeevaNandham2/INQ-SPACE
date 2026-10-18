@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="55 66 1300 1300">
+  <defs>
+    <clipPath id="c">
+      <polygon points="0,44 1400,1444 1400,0 0,0"/>
+      <polygon points="0,500 1400,1900 0,1900"/>
+    </clipPath>
+  </defs>
+  <path fill="#1b2c3a" d="M220 72H353L365 1049H353V1207H320V1232H304V1308H289V1365H284V1308H268V1232H252V1207H220V1049H204Z"/>
+  <path fill="#4a595c" clip-path="url(#c)" d="M447 72A640 640 0 0 1 447 1352V1191A479 479 0 0 0 447 233Z"/>
+  <path fill="#4a595c" d="M447 603L1209 1365H983L447 830Z"/>
+</svg>
