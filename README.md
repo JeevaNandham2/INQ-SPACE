@@ -19,11 +19,12 @@ npm run build      # production files in dist/
 npm run preview    # serve the built site locally
 ```
 
-## Deploy (Vercel → https://inqspace.in)
+## Deploy (Vercel → https://www.inqspace.in)
 
 The repository is connected to Vercel; every push to `main` deploys automatically.
-`vercel.json` sets the build (`npm run build` → `dist`), clean URLs (`/about` serves `about.html`),
-the `www` → apex redirect and caching headers.
+`vercel.json` sets the build (`npm run build` → `dist`), clean URLs (`/about` serves `about.html`)
+and caching headers. The main address is `www.inqspace.in`; Vercel's domain settings redirect
+`inqspace.in` to it.
 
 `npm run build` also runs `scripts/static-routes.mjs`, which writes `about.html`, `services.html`,
 `projects.html`, `contact.html` and `404.html` — each with its own title, description and canonical
