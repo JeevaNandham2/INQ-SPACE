@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://inqspacepreview.netlify.app/sitemap.xml
+Sitemap: https://inqspace.in/sitemap.xml

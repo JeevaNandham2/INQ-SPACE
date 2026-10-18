@@ -19,13 +19,15 @@ npm run build      # production files in dist/
 npm run preview    # serve the built site locally
 ```
 
-## Deploy (Netlify)
+## Deploy
 
-`netlify.toml` already holds the settings: build command `npm run build`, publish folder `dist`,
-and a rewrite so routes like `/about` work when opened directly.
+Live domain: **https://inqspace.in** (set in `.env` as `VITE_SITE_URL`, and in
+`public/robots.txt` and `public/sitemap.xml`).
 
-The live address is set in `.env` (`VITE_SITE_URL`). If the site moves to its own domain,
-update it there and in `public/robots.txt` and `public/sitemap.xml`, then rebuild.
+- **Netlify** — `netlify.toml` holds the build command (`npm run build`), the publish folder (`dist`)
+  and the rewrite that lets routes like `/about` open directly.
+- **Hostinger web hosting** — run `npm run build` and upload the *contents* of `dist/` to `public_html`.
+  `public/.htaccess` (copied into `dist/`) forces https, drops `www` and handles the routes.
 
 ## Project layout
 
